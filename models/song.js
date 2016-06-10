@@ -16,9 +16,10 @@ class Song{
         this.duration = duration;
         this.name = name;
         this.album = new Album(album) ;
-        this.artists = artists.map(artist=>{
-            return new Artist(artist);
-        });
+        this.artist = new Artist(artists[0])
+        // this.artists = artists.map(artist=>{
+        //     return new Artist(artist);
+        // });
 
         return new Promise((resolve,reject)=>{
             co(function *(){

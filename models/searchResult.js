@@ -45,7 +45,7 @@ class SearchResult{
                     {
                         songs[i] = yield new Song(songs[i]);
                     }
-                    resolve([queryCorrected,songCount,songs])
+                    resolve(songs)
                 }else{
                     reject(json_res);
                 }
